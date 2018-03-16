@@ -1,11 +1,21 @@
 
 #include "test_case_printer.h"
 
+//#include <iostream>
+//#include <string>
+//#include <typeinfo>
+//
+//using std::string;
+//using namespace std;
 
 
 
-void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces = "  ",
-						string between_str = "   " , string post_str = "", string print_type = "one line")
+
+//void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces = "  ",
+//						string between_str = "   " , string post_str = "", string print_type = "one line")
+
+void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces,
+						string between_str, string post_str, string print_type)
 {
 	string tc_strings[num_test_cases];
 
@@ -57,18 +67,18 @@ string make_aligned_str(string data, int max_data_chars, string alignment_type)
 
 
 
-int main()
-{
-	char c1 = 'g';
-	string s;
-	s += c1;
-
-	test_case tc1 = {"data1" , to_string(32)};
-	test_case tc2 = {"data2", "str data"};
-	test_case tc3 = {"data3",  s, 10, "left"};
-
-	test_case test_cases[] = { tc1, tc2, tc3 };
-	display_test_cases(test_cases, 3);
-	display_test_cases(test_cases, 3, "  ", "   ", "", "one case per line" );
-
-}
+//int main()
+//{
+//	char c1 = 'g';
+//	string s;
+//	s += c1;
+//
+//	test_case tc1 = {"data1" , to_string(32)};
+//	test_case tc2 = {"data2", "test"};
+//	test_case tc3 = {"data3",  s, 10, "left"};
+//
+//	test_case test_cases[] = { tc1, tc2, tc3 };
+//	display_test_cases(test_cases, 3);
+//	display_test_cases(test_cases, 3, "  ", "   ", "", "one case per line" );
+//
+//}
