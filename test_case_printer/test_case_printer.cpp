@@ -1,18 +1,6 @@
 
 #include "test_case_printer.h"
 
-//#include <iostream>
-//#include <string>
-//#include <typeinfo>
-//
-//using std::string;
-//using namespace std;
-
-
-
-
-//void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces = "  ",
-//						string between_str = "   " , string post_str = "", string print_type = "one line")
 
 void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces,
 						string between_str, string post_str, string print_type)

@@ -15,6 +15,4 @@ int main()
 	test_case test_cases[] = { tc1, tc2, tc3 };
 	display_test_cases(test_cases, 3);
 	display_test_cases(test_cases, 3, "  ", "   ", "", "one case per line" );
-	cout << "hello" << endl;
-
 }
