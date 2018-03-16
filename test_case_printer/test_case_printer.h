@@ -1,8 +1,6 @@
 #ifndef TEST_CASE_PRINTER_H
 #define TEST_CASE_PRINTER_H
 
-//#include "test_case_printer.cpp"
-
 #include <iostream>
 #include <string>
 #include <typeinfo>
@@ -24,9 +22,11 @@ struct test_case
 string make_aligned_str(string data, int max_data_chars, string alignment_type);
 
 
-void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces = "  ",
-						string between_str = "   " , string post_str = "", string print_type = "one line");
-
-
+void display_test_cases(test_case test_cases[],
+						int num_test_cases,
+						string pre_spaces 	= "  ",
+						string between_str	= "   ",
+						string post_str 	= "",
+						string print_type 	= "one line");
 
 #endif

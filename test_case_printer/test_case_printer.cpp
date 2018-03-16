@@ -2,8 +2,7 @@
 #include "test_case_printer.h"
 
 
-void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces,
-						string between_str, string post_str, string print_type)
+void display_test_cases(test_case test_cases[], int num_test_cases, string pre_spaces, string between_str, string post_str, string print_type)
 {
 	string tc_strings[num_test_cases];
 
