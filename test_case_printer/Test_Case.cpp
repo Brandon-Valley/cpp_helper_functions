@@ -1,5 +1,5 @@
 
-#include "test_case_printer.h"
+#include "Test_Case.h"
 
 Test_Case::Test_Case()
 {
@@ -8,24 +8,10 @@ Test_Case::Test_Case()
 //	m_test_vars = new test_var[ m_num_test_vars ];
 }
 
-//Test_Case::~Test_Case() { delete [] m_test_vars; }
-
-////increases size of m_test_vars so a new test_var can be added
-//void Test_Case::grow_test_vars()
-//{
-//	test_var *new_test_vars = new test_var[ m_num_test_vars + 1 ];
-//
-//	for (int i = 0 ; i < m_num_test_vars ; i++)
-//		new_test_vars[i] = m_test_vars[i];
-//
-//	delete [] m_test_vars;
-//	m_test_vars = new_test_vars;
-//	m_num_test_vars ++ ;
-//}
 
 void Test_Case::add_test_var(	string lable,            	//need
 								string data,				//need
-								int max_data_chars,
+								int    max_data_chars,
 								string alignment_type,
 								string lable_data_seperation_spacing,
 								string lable_data_seperation_str)
@@ -36,7 +22,7 @@ void Test_Case::add_test_var(	string lable,            	//need
 	tv.max_data_chars					= max_data_chars;
 	tv.alignment_type 					= alignment_type;
 	tv.lable_data_seperation_spacing 	= lable_data_seperation_spacing;
-	tv.lable_data_seperation_str 		=  lable_data_seperation_str;
+	tv.lable_data_seperation_str 		= lable_data_seperation_str;
 
 	m_test_vars.push_back(tv);
 }

@@ -1,5 +1,5 @@
-#ifndef test_var_PRINTER_H
-#define test_var_PRINTER_H
+#ifndef TEST_CASE_H
+#define TEST_CASE_H
 
 #include <iostream>
 #include <string>
