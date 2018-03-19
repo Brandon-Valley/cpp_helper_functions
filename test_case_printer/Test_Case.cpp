@@ -1,13 +1,6 @@
 
 #include "Test_Case.h"
 
-Test_Case::Test_Case()
-{
-//	m_num_test_vars;
-
-//	m_test_vars = new test_var[ m_num_test_vars ];
-}
-
 
 void Test_Case::add_test_var(	string lable,            	//need
 								string data,				//need

@@ -27,7 +27,7 @@ private:
 	std::vector< test_var > m_test_vars;
 
 public:
-	Test_Case();
+	Test_Case() {};
 
 
 	void add_test_var(  string lable,            			 //need
