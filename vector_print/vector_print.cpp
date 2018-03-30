@@ -6,72 +6,71 @@ using namespace std;
 using std::vector;
 
 
+
+// This relies on you having implemented the .at() and .size() member functions first.
 template <typename T>
-string content(vector<T> vec)
+std::ostream & operator << (std::ostream &out, vector<T> &vec)
 {
-	string result = "[";
+    out << "[";
 
-	for (int i = 0 ; i < vec.size() ; i++)
-	{
-		result += to_string(vec[i]);
+    for(int i = 0; i < vec.size(); i++)
+    {
+    	if ( i < vec.size() - 1 )
+    		out << vec.at(i) << ", ";
+    	else
+    		out << vec.at(i);
+    }
+    out << "]";
 
-		if ( i < vec.size() - 1 )
-			result += ", ";
-	}
+    return out;
+}
 
-	result += "]";
-	return result;
+
+std::ostream & operator << (std::ostream &out, vector<string> &vec)
+{
+    out << "[";
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+    	if ( i < vec.size() - 1 )
+    		out << "\"" << vec.at(i) << "\"" << ", ";
+    	else
+    		out << "\"" << vec.at(i) << "\"";
+    }
+    out << "]";
+
+    return out;
+}
+
+
+std::ostream & operator << (std::ostream &out, vector<char> &vec)
+{
+    out << "[";
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+    	if ( i < vec.size() - 1 )
+    		out << "\'" << vec.at(i) << "\'" << ", ";
+    	else
+    		out << "\'" << vec.at(i) << "\'";
+    }
+    out << "]";
+
+    return out;
 }
 
 
 
-string content(vector<string> vec)
-{
-	string result = "[";
-
-	for (int i = 0 ; i < vec.size() ; i++)
-	{
-		result += "\"" + vec[i] + "\"";
-
-		if ( i < vec.size() - 1 )
-			result += ", ";
-	}
-
-	result += "]";
-	return result;
-}
-
-
-
-string content(vector<char> vec)
-{
-	string result = "[";
-
-	for (int i = 0 ; i < vec.size() ; i++)
-	{
-		result += "\'";
-		result += vec[i];
-		result += "\'";
-
-		if ( i < vec.size() - 1 )
-			result += ", ";
-	}
-
-	result += "]";
-	return result;
-}
-
+template <typename T>
+void print(vector<T> vec){ cout << content(vec) << endl; }
 
 int main()
 {
-	cout << "hi" << endl;
-
 	vector<int> v1 = {9, 4, 444, NULL, 0 };
 	vector<string> v2 = {"sfdsd", "", "df", "0"};
 	vector<char> v3 = {'s', 'o', '3', '0'};
 
-
-	cout << content(v1) << endl;
-	cout << content(v2) << endl;
-	cout << content(v3) << endl;
+	cout << v1 << endl;
+	cout << v2 << endl;
+	cout << v3 << endl;
 }
